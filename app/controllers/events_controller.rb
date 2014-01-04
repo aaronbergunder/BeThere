@@ -35,6 +35,7 @@ class EventsController < ApplicationController
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
     end
+    @event.set_url
   end
 
   # PATCH/PUT /events/1
@@ -69,6 +70,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:name, :url, :guests, :date, :password, :owner, :event_id)
+      params.require(:event).permit(:name, :url, :guests, :date, :password, :owner, :event_id, :id)
     end
 end

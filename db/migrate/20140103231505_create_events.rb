@@ -7,7 +7,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :date
       t.string :password
       t.string :owner
-      t.integer :event_id
+      t.string :token
 
       t.timestamps
     end

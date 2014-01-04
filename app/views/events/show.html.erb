@@ -30,9 +30,10 @@
   <%= @event.owner %>
 </p>
 <p>
-  <strong>Event ID:</strong>
-  <%= @event.event_id %>
+  <strong>Token:</strong>
+  <%= @event.token %>
 </p>
+
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

@@ -16,11 +16,11 @@ ActiveRecord::Schema.define(version: 20140103231505) do
   create_table "events", force: true do |t|
     t.string   "name"
     t.string   "url"
-    t.string   "guests",     default: "--- []\n"
+    t.string   "guests"
     t.string   "date"
     t.string   "password"
     t.string   "owner"
-    t.integer  "event_id"
+    t.string  "token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
