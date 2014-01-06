@@ -11,18 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140103231505) do
+ActiveRecord::Schema.define(version: 20140106002255) do
 
   create_table "events", force: true do |t|
     t.string   "name"
     t.string   "url"
-    t.string   "guests"
+    t.string   "guests",     default: "--- []\n"
     t.string   "date"
     t.string   "password"
     t.string   "owner"
-    t.string  "token"
+    t.string   "token"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "time"
   end
 
 end
