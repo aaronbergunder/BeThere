@@ -10,6 +10,11 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    @event = Event.find_by_token(params[:id])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @events}
+  end
   end
 
   # GET /events/new
@@ -64,11 +69,12 @@ class EventsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_event
-      @event = Event.find(params[:id])
+      @event = Event.find_by_token(params[:id])
     end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:name, :url, :guests, :date, :password, :owner, :event_id, :id, :time)
+      params.require(:event).permit(:name, :url, :guests, :date, :password, :owner, :event_id, :id, :time, :token)
     end
 end

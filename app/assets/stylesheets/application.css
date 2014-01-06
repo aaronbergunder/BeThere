@@ -12,11 +12,26 @@
  *= require_tree .
  */
 
+
+
 .container {
 
 }
 
 .field {
-
 	margin-bottom: 1em;
+}
+
+.row.event {
+	margin-bottom: 2em;
+	border-top: 1px solid #ddd;
+}
+
+.right {
+	text-align: right;
+}
+
+.helv {
+	font-family: "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+	color: #fff;
 }

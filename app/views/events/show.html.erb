@@ -1,44 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+    <h4 class="helv">BeThere</h4>
+  </div>
+</div>
 
-<p>
-  <strong>Url:</strong>
-  <%= @event.url %>
-</p>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h3><%= @event.name %></h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
 
-<p>
-  <strong>Guests:</strong>
-  <%= @event.guests %>
-</p>
+<h4><%= @event.guests %></h4>
 
-<p>
-  <strong>Date:</strong>
-  <%= @event.date %>
-</p>
+<h4><%= @event.date %></h4>
+  
+<h4><%= @event.time %></h4>
 
-<p>
-  <strong>Time:</strong>
-  <%= @event.time %>
-</p>
+<p>Hosted by: <%= @event.owner %></p>
 
-<p>
-  <strong>Password:</strong>
-  <%= @event.password %>
-</p>
+<p>Permalink: <%= link_to 'http://localhost:3000/events/' + @event.token %></p>
+  </div>
+</div>
 
-<p>
-  <strong>Owner:</strong>
-  <%= @event.owner %>
-</p>
-<p>
-  <strong>Token:</strong>
-  <%= @event.token %>
-</p>
-
-
+<div class="col-sm-6 col-sm-offset-3 right">
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
+</div>
