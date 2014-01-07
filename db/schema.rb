@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20140106002255) do
   create_table "events", force: true do |t|
     t.string   "name"
     t.string   "url"
-    t.string   "guests",     default: "--- []\n"
+    t.string   "guests"
     t.string   "date"
     t.string   "password"
     t.string   "owner"
