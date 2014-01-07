@@ -3,7 +3,7 @@ class CreateEvents < ActiveRecord::Migration
     create_table :events do |t|
       t.string :name
       t.string :url
-      t.string :guests, array: true, default: []
+      t.text :guestlist
       t.string :date
       t.string :password
       t.string :owner
@@ -11,5 +11,6 @@ class CreateEvents < ActiveRecord::Migration
 
       t.timestamps
     end
+
   end
 end

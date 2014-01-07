@@ -15,9 +15,9 @@
     <%= f.text_field :name, :class => "form-control", :placeholder => "Your event name" %>
   </div>
    <div class="field" >
-    <%= f.label :guests %><br>
-    <div id="guests">
-      <%= text_field_tag :guests, placeholder: ("Guest email"), :class => "form-control" %>
+    <%= f.label :guestlist %><br>
+    <div id="guestlist">
+      <input type="text" name='event[guestlist][]' placeholder="Guest email" class="form-control" >
     </div>
     <span id="addguest">Add a guest</span>
   </div>

@@ -18,7 +18,7 @@
 $ ( document ).ready(function() {
 
   $("#addguest").click(function(e){
-   $("#guests").append("<input />");
+   $("#guestlist").append("<input type='text' name='event[guestlist][]' class='form-control' placeholder='Guest email' />");
   })
 
 });
